@@ -1,5 +1,8 @@
 body {
-  background: #181b20;
+  background: 
+    linear-gradient(rgba(24,27,32,0.85), rgba(24,27,32,0.85)),
+    url('../assets/email-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #e0e0e0;
   min-height: 100vh;
   margin: 0;
@@ -9,7 +12,7 @@ body {
 .email-form-container {
   padding: 32px 24px;
   max-width: 500px;
-  margin: 48px auto;
+  margin: 50px auto; /* was 48px auto, increased for more space */
   background: #23272f;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.24), 0 1.5px 4px rgba(0,0,0,0.18);
@@ -51,4 +54,90 @@ body {
 /* Optional: style error text */
 .email-form-container .MuiFormHelperText-root.Mui-error {
   color: #ff6f61;
+}
+
+.email-form-title {
+  text-align: center;
+  margin-top: 140px; /* was 80px, increased for more space */
+  margin-bottom: 10px; /* was 0, add space below header */
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.email-form-title-main {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #90caf9;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #23272f88;
+}
+
+.email-form-title-by {
+  display: block;
+  font-size: 1.1rem;
+  color: #b0bec5;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.email-form-toolbar {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar-btn {
+  min-width: 28px !important;
+  padding: 2px 4px !important;
+  font-size: 1rem !important;
+  background: transparent !important;
+  color: #90caf9 !important;
+  border-radius: 4px !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
+
+.toolbar-btn:hover {
+  background: #181b20 !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.email-form-textarea {
+  background: #181b20; /* was transparent */
+  color: #e0e0e0;      /* was transparent */
+  caret-color: #e0e0e0;
+  position: relative;
+  z-index: 2;
+  border: none;
+  outline: none;
+  font: inherit;
+  width: 100%;
+  min-height: 96px;
+  resize: vertical;
+  padding: 16.5px 14px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.email-form-overlay {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 96px;
+  color: #e0e0e0;
+  padding: 16.5px 14px;
+  white-space: pre-wrap;
+  font: inherit;
+  z-index: 1;
+  background: transparent;
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
