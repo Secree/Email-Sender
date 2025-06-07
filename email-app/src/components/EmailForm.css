@@ -1,6 +1,5 @@
 body {
   background: 
-    linear-gradient(rgba(24,27,32,0.85), rgba(24,27,32,0.85)),
     url('../assets/email-bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #e0e0e0;
